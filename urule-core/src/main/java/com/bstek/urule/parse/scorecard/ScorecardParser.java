@@ -15,14 +15,6 @@
  ******************************************************************************/
 package com.bstek.urule.parse.scorecard;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.List;
-
-import org.apache.commons.lang.StringUtils;
-import org.dom4j.Element;
-
 import com.bstek.urule.Configure;
 import com.bstek.urule.RuleException;
 import com.bstek.urule.builder.RulesRebuilder;
@@ -32,15 +24,17 @@ import com.bstek.urule.model.library.variable.Variable;
 import com.bstek.urule.model.rule.Library;
 import com.bstek.urule.model.rule.LibraryType;
 import com.bstek.urule.model.rule.Value;
-import com.bstek.urule.model.scorecard.AssignTargetType;
-import com.bstek.urule.model.scorecard.AttributeRow;
-import com.bstek.urule.model.scorecard.CardCell;
-import com.bstek.urule.model.scorecard.CustomCol;
-import com.bstek.urule.model.scorecard.ScorecardDefinition;
-import com.bstek.urule.model.scorecard.ScoringType;
+import com.bstek.urule.model.scorecard.*;
 import com.bstek.urule.model.table.Condition;
 import com.bstek.urule.model.table.Joint;
 import com.bstek.urule.parse.Parser;
+import org.apache.commons.lang3.StringUtils;
+import org.dom4j.Element;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author Jacky.gao

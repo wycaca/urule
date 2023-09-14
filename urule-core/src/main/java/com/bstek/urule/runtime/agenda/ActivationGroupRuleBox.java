@@ -15,17 +15,16 @@
  ******************************************************************************/
 package com.bstek.urule.runtime.agenda;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import org.apache.commons.lang.StringUtils;
-
 import com.bstek.urule.action.ActionValue;
 import com.bstek.urule.model.rule.Rule;
 import com.bstek.urule.model.rule.RuleInfo;
 import com.bstek.urule.runtime.rete.Context;
+import org.apache.commons.lang3.StringUtils;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 /**
  * 规则以activation-group属性进行分组，该属性相同且满足所有条件的规则都会划到此组中,<br>
  * 这样，在执行时这个组中规则只要有一个执行，那么其它的规则将不再执行，因此也叫互斥组。

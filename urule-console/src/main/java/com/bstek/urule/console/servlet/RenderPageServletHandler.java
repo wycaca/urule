@@ -15,7 +15,8 @@
  ******************************************************************************/
 package com.bstek.urule.console.servlet;
 
-import org.apache.commons.lang.StringUtils;
+import com.bstek.urule.Utils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.velocity.app.Velocity;
 import org.apache.velocity.app.VelocityEngine;
 import org.apache.velocity.runtime.RuntimeConstants;
@@ -23,8 +24,6 @@ import org.apache.velocity.runtime.log.NullLogChute;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
-
-import com.bstek.urule.Utils;
 
 
 /**

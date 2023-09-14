@@ -15,18 +15,17 @@
  ******************************************************************************/
 package com.bstek.urule.parse;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.apache.commons.lang.StringUtils;
-import org.dom4j.Element;
-
 import com.bstek.urule.model.library.Datatype;
 import com.bstek.urule.model.rule.Op;
 import com.bstek.urule.model.rule.lhs.Criterion;
 import com.bstek.urule.model.rule.lhs.JunctionType;
 import com.bstek.urule.model.rule.lhs.NamedItem;
 import com.bstek.urule.model.rule.lhs.NamedJunction;
+import org.apache.commons.lang3.StringUtils;
+import org.dom4j.Element;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author Jacky.gao

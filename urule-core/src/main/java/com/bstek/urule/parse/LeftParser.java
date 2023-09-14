@@ -15,18 +15,11 @@
  ******************************************************************************/
 package com.bstek.urule.parse;
 
-import org.apache.commons.lang.StringUtils;
-import org.dom4j.Element;
-
 import com.bstek.urule.RuleException;
 import com.bstek.urule.model.library.Datatype;
-import com.bstek.urule.model.rule.lhs.CommonFunctionLeftPart;
-import com.bstek.urule.model.rule.lhs.CommonFunctionParameter;
-import com.bstek.urule.model.rule.lhs.FunctionLeftPart;
-import com.bstek.urule.model.rule.lhs.Left;
-import com.bstek.urule.model.rule.lhs.LeftType;
-import com.bstek.urule.model.rule.lhs.MethodLeftPart;
-import com.bstek.urule.model.rule.lhs.VariableLeftPart;
+import com.bstek.urule.model.rule.lhs.*;
+import org.apache.commons.lang3.StringUtils;
+import org.dom4j.Element;
 
 /**
  * @author Jacky.gao

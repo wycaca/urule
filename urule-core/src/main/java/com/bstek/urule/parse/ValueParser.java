@@ -15,26 +15,14 @@
  ******************************************************************************/
 package com.bstek.urule.parse;
 
-import java.util.List;
-
-import org.apache.commons.lang.StringEscapeUtils;
-import org.apache.commons.lang.StringUtils;
+import com.bstek.urule.model.library.Datatype;
+import com.bstek.urule.model.rule.*;
+import com.bstek.urule.model.rule.lhs.CommonFunctionParameter;
+import org.apache.commons.lang3.StringEscapeUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.dom4j.Element;
 
-import com.bstek.urule.model.library.Datatype;
-import com.bstek.urule.model.rule.AbstractValue;
-import com.bstek.urule.model.rule.CommonFunctionValue;
-import com.bstek.urule.model.rule.ConstantValue;
-import com.bstek.urule.model.rule.MethodValue;
-import com.bstek.urule.model.rule.NamedReferenceValue;
-import com.bstek.urule.model.rule.Parameter;
-import com.bstek.urule.model.rule.ParameterValue;
-import com.bstek.urule.model.rule.SimpleValue;
-import com.bstek.urule.model.rule.Value;
-import com.bstek.urule.model.rule.ValueType;
-import com.bstek.urule.model.rule.VariableCategoryValue;
-import com.bstek.urule.model.rule.VariableValue;
-import com.bstek.urule.model.rule.lhs.CommonFunctionParameter;
+import java.util.List;
 /**
  * @author Jacky.gao
  * @since 2014年12月23日

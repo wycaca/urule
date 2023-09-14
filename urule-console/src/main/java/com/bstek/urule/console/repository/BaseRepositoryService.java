@@ -15,26 +15,12 @@
  ******************************************************************************/
 package com.bstek.urule.console.repository;
 
-import java.io.InputStream;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-
-import javax.jcr.Binary;
-import javax.jcr.Node;
-import javax.jcr.NodeIterator;
-import javax.jcr.Property;
-import javax.jcr.Session;
-import javax.jcr.SimpleCredentials;
-import javax.jcr.lock.LockManager;
-import javax.jcr.version.Version;
-import javax.jcr.version.VersionHistory;
-import javax.jcr.version.VersionIterator;
-import javax.jcr.version.VersionManager;
-
+import com.bstek.urule.RuleException;
+import com.bstek.urule.console.DefaultRepositoryInteceptor;
+import com.bstek.urule.console.RepositoryInteceptor;
+import com.bstek.urule.console.repository.model.*;
 import org.apache.commons.io.IOUtils;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.jackrabbit.core.RepositoryImpl;
 import org.dom4j.Document;
 import org.dom4j.DocumentHelper;
@@ -43,14 +29,17 @@ import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 
-import com.bstek.urule.RuleException;
-import com.bstek.urule.console.DefaultRepositoryInteceptor;
-import com.bstek.urule.console.RepositoryInteceptor;
-import com.bstek.urule.console.repository.model.RepositoryFile;
-import com.bstek.urule.console.repository.model.ResourceItem;
-import com.bstek.urule.console.repository.model.ResourcePackage;
-import com.bstek.urule.console.repository.model.Type;
-import com.bstek.urule.console.repository.model.VersionFile;
+import javax.jcr.*;
+import javax.jcr.lock.LockManager;
+import javax.jcr.version.Version;
+import javax.jcr.version.VersionHistory;
+import javax.jcr.version.VersionIterator;
+import javax.jcr.version.VersionManager;
+import java.io.InputStream;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 /**
  * @author Jacky.gao

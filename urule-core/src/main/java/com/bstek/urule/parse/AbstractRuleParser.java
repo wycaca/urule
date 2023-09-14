@@ -15,15 +15,14 @@
  ******************************************************************************/
 package com.bstek.urule.parse;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-
-import org.apache.commons.lang.StringUtils;
-import org.dom4j.Element;
-
 import com.bstek.urule.Configure;
 import com.bstek.urule.RuleException;
 import com.bstek.urule.model.rule.Rule;
+import org.apache.commons.lang3.StringUtils;
+import org.dom4j.Element;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 /**
  * @author Jacky.gao

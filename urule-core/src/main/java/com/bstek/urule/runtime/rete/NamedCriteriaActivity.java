@@ -15,16 +15,15 @@
  ******************************************************************************/
 package com.bstek.urule.runtime.rete;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-
-import org.apache.commons.lang.StringUtils;
-
 import com.bstek.urule.Utils;
 import com.bstek.urule.debug.MsgType;
 import com.bstek.urule.model.rule.lhs.EvaluateResponse;
 import com.bstek.urule.model.rule.lhs.NamedCriteria;
+import org.apache.commons.lang3.StringUtils;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 /**
  * @author Jacky.gao

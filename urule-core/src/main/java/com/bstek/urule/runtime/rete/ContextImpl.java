@@ -15,19 +15,18 @@
  ******************************************************************************/
 package com.bstek.urule.runtime.rete;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import org.apache.commons.lang.StringUtils;
-import org.springframework.context.ApplicationContext;
-
 import com.bstek.urule.Utils;
 import com.bstek.urule.debug.MessageItem;
 import com.bstek.urule.debug.MsgType;
 import com.bstek.urule.runtime.ElCalculator;
 import com.bstek.urule.runtime.WorkingMemory;
 import com.bstek.urule.runtime.assertor.AssertorEvaluator;
+import org.apache.commons.lang3.StringUtils;
+import org.springframework.context.ApplicationContext;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * @author Jacky.gao

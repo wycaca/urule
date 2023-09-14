@@ -15,15 +15,14 @@
  ******************************************************************************/
 package com.bstek.urule.parse.scorecard;
 
-import org.apache.commons.lang.StringUtils;
-import org.dom4j.Element;
-
 import com.bstek.urule.model.library.Datatype;
 import com.bstek.urule.model.scorecard.CardCell;
 import com.bstek.urule.model.scorecard.CellType;
 import com.bstek.urule.parse.Parser;
 import com.bstek.urule.parse.ValueParser;
 import com.bstek.urule.parse.table.JointParser;
+import org.apache.commons.lang3.StringUtils;
+import org.dom4j.Element;
 
 /**
  * @author Jacky.gao

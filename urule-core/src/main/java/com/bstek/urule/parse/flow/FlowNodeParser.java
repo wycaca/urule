@@ -15,19 +15,18 @@
  ******************************************************************************/
 package com.bstek.urule.parse.flow;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-
-import org.apache.commons.lang.StringUtils;
+import com.bstek.urule.model.flow.Connection;
+import com.bstek.urule.parse.CriterionParser;
+import com.bstek.urule.parse.Parser;
+import org.apache.commons.lang3.StringUtils;
 import org.dom4j.Element;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 
-import com.bstek.urule.model.flow.Connection;
-import com.bstek.urule.parse.CriterionParser;
-import com.bstek.urule.parse.Parser;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 /**
  * @author Jacky.gao

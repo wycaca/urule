@@ -15,17 +15,16 @@
  ******************************************************************************/
 package com.bstek.urule.runtime.agenda;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import org.apache.commons.lang.StringUtils;
-
 import com.bstek.urule.action.ActionValue;
 import com.bstek.urule.model.rule.Rule;
 import com.bstek.urule.model.rule.RuleInfo;
 import com.bstek.urule.runtime.rete.Context;
+import org.apache.commons.lang3.StringUtils;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 /**
  * 以agenda-group属性划分的组，如果该属性相同，则划到这个组当中，<br>
  * 默认情况下，引擎在执行这些有agenda-group属性的规则时，需要某个组得到了焦点，<br>

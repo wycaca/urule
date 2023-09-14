@@ -15,14 +15,13 @@
  ******************************************************************************/
 package com.bstek.urule.console.repository;
 
-import java.io.InputStream;
-
-import org.apache.commons.io.IOUtils;
-import org.apache.commons.lang.StringUtils;
-
 import com.bstek.urule.RuleException;
 import com.bstek.urule.builder.resource.Resource;
 import com.bstek.urule.builder.resource.ResourceProvider;
+import org.apache.commons.io.IOUtils;
+import org.apache.commons.lang3.StringUtils;
+
+import java.io.InputStream;
 
 /**
  * @author Jacky.gao

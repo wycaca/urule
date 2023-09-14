@@ -15,15 +15,14 @@
  ******************************************************************************/
 package com.bstek.urule.parse.flow;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.apache.commons.lang.StringUtils;
-import org.dom4j.Element;
-
 import com.bstek.urule.model.flow.DecisionItem;
 import com.bstek.urule.model.flow.DecisionNode;
 import com.bstek.urule.model.flow.DecisionType;
+import org.apache.commons.lang3.StringUtils;
+import org.dom4j.Element;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author Jacky.gao

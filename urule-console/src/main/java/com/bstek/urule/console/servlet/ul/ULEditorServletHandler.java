@@ -15,20 +15,6 @@
  ******************************************************************************/
 package com.bstek.urule.console.servlet.ul;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.io.PrintWriter;
-
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-import org.apache.commons.io.IOUtils;
-import org.apache.commons.lang.StringUtils;
-import org.apache.velocity.Template;
-import org.apache.velocity.VelocityContext;
-
 import com.bstek.urule.RuleException;
 import com.bstek.urule.Utils;
 import com.bstek.urule.builder.ResourceLibraryBuilder;
@@ -37,6 +23,18 @@ import com.bstek.urule.console.servlet.RenderPageServletHandler;
 import com.bstek.urule.dsl.DSLRuleSetBuilder;
 import com.bstek.urule.model.library.ResourceLibrary;
 import com.bstek.urule.model.rule.RuleSet;
+import org.apache.commons.io.IOUtils;
+import org.apache.commons.lang3.StringUtils;
+import org.apache.velocity.Template;
+import org.apache.velocity.VelocityContext;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.PrintWriter;
 
 /**
  * @author Jacky.gao

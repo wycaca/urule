@@ -15,13 +15,12 @@
  ******************************************************************************/
 package com.bstek.urule.parse;
 
-import org.apache.commons.lang.StringUtils;
-import org.dom4j.Element;
-
 import com.bstek.urule.action.Action;
 import com.bstek.urule.action.VariableAssignAction;
 import com.bstek.urule.model.library.Datatype;
 import com.bstek.urule.model.rule.lhs.LeftType;
+import org.apache.commons.lang3.StringUtils;
+import org.dom4j.Element;
 /**
  * @author Jacky.gao
  * @since 2014年12月23日

@@ -15,15 +15,6 @@
  ******************************************************************************/
 package com.bstek.urule.parse.table;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import org.apache.commons.lang.StringUtils;
-import org.dom4j.Element;
-
 import com.bstek.urule.Configure;
 import com.bstek.urule.RuleException;
 import com.bstek.urule.builder.RulesRebuilder;
@@ -37,6 +28,14 @@ import com.bstek.urule.model.table.Column;
 import com.bstek.urule.model.table.Condition;
 import com.bstek.urule.model.table.DecisionTable;
 import com.bstek.urule.parse.Parser;
+import org.apache.commons.lang3.StringUtils;
+import org.dom4j.Element;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * @author Jacky.gao

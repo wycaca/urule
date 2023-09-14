@@ -15,31 +15,11 @@
  ******************************************************************************/
 package com.bstek.urule.console.repository;
 
-import java.io.File;
-import java.io.InputStream;
-import java.util.Properties;
-import java.util.logging.Logger;
-
-import javax.jcr.RepositoryException;
-import javax.servlet.ServletContext;
-import javax.sql.DataSource;
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-
+import com.bstek.urule.RuleException;
 import org.apache.commons.io.IOUtils;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.jackrabbit.core.RepositoryImpl;
-import org.apache.jackrabbit.core.config.AccessManagerConfig;
-import org.apache.jackrabbit.core.config.BeanConfig;
-import org.apache.jackrabbit.core.config.ClusterConfig;
-import org.apache.jackrabbit.core.config.DataSourceConfig;
-import org.apache.jackrabbit.core.config.LoginModuleConfig;
-import org.apache.jackrabbit.core.config.PersistenceManagerConfig;
-import org.apache.jackrabbit.core.config.RepositoryConfig;
-import org.apache.jackrabbit.core.config.RepositoryConfigurationParser;
-import org.apache.jackrabbit.core.config.SecurityConfig;
-import org.apache.jackrabbit.core.config.SecurityManagerConfig;
-import org.apache.jackrabbit.core.config.VersioningConfig;
+import org.apache.jackrabbit.core.config.*;
 import org.apache.jackrabbit.core.data.DataStore;
 import org.apache.jackrabbit.core.data.DataStoreFactory;
 import org.apache.jackrabbit.core.data.FileDataStore;
@@ -63,7 +43,15 @@ import org.springframework.web.context.WebApplicationContext;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
-import com.bstek.urule.RuleException;
+import javax.jcr.RepositoryException;
+import javax.servlet.ServletContext;
+import javax.sql.DataSource;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import java.io.File;
+import java.io.InputStream;
+import java.util.Properties;
+import java.util.logging.Logger;
 
 /**
  * @author Jacky.gao
