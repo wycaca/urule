@@ -229,7 +229,7 @@
     </bean>
     <bean id="urule.parenParser" class="com.bstek.urule.parse.ParenParser">
         <property name="valueParser" ref="urule.valueParser"/>
-        <property name="arithmeticParser" ref="complexArithmeticParser"/>
+        <property name="arithmeticParser" ref="urule.complexArithmeticParser"/>
     </bean>
     <bean id="urule.constantLibraryParser" class="com.bstek.urule.parse.ConstantLibraryParser"/>
     <bean id="urule.actionNodeParser" class="com.bstek.urule.parse.flow.ActionNodeParser"/>
@@ -329,12 +329,12 @@
         <property name="valueParser" ref="urule.valueParser"/>
     </bean>
     <bean id="urule.simpleArithmeticParser" class="com.bstek.urule.parse.SimpleArithmeticParser"/>
-    <bean id="complexArithmeticParser" class="com.bstek.urule.parse.ComplexArithmeticParser">
+    <bean id="urule.complexArithmeticParser" class="com.bstek.urule.parse.ComplexArithmeticParser">
         <property name="valueParser" ref="urule.valueParser"/>
         <property name="parenParser" ref="urule.parenParser"/>
     </bean>
     <bean id="urule.valueParser" class="com.bstek.urule.parse.ValueParser">
-        <property name="arithmeticParser" ref="complexArithmeticParser"/>
+        <property name="arithmeticParser" ref="urule.complexArithmeticParser"/>
     </bean>
     <bean id="urule.variableParser" class="com.bstek.urule.parse.VariableParser"/>
     <bean id="urule.variableCategoryParser" class="com.bstek.urule.parse.VariableCategoryParser">

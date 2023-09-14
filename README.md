@@ -48,11 +48,12 @@ URule提供了两个版本：一个是基于Apache-2.0协议开源免费版本�
 
 URule PRO版在线示例：[http://112.124.15.63:8084/index.html](http://112.124.15.63:8084/index.html)
 
-# QQ群
+# 运行
+npm install core, console
 
-群号：423339793
+或者直接install parent
 
-#### ![](https://github.com/youseries/assets/blob/master/images/qq-qrcode.png)
+http://localhost:8080/urule/frame###
 
 # License
 

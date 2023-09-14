@@ -3,41 +3,49 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.bstek.urule</groupId>
     <artifactId>urule-parent</artifactId>
-    <version>${project.urule.version}</version>
+    <version>2.0.4</version>
+    <name>Urule Parent Project</name>
+    <description>Urule Parent Project</description>
 
     <modules>
-        <module>../urule-core</module>
-        <module>../urule-console</module>
-        <module>../urule-springboot</module>
+        <module>./urule-core</module>
+        <module>./urule-console</module>
+        <module>./urule-springboot</module>
     </modules>
 
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.5.15</version>
+    </parent>
+
     <properties>
+        <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
         <project.urule.version>2.1.8-SNAPSHOT</project.urule.version>
+        <project.urule.parent.version>2.0.4</project.urule.parent.version>
     </properties>
-    <licenses>
-        <license>
-            <name>The Apache License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-        </license>
-    </licenses>
-    <developers>
-        <developer>
-            <name>Gaojie</name>
-            <email>jacky.gao@bstek.com</email>
-            <organization>Bstek</organization>
-            <organizationUrl>http://www.bstek.com</organizationUrl>
-        </developer>
-    </developers>
-    <scm>
-        <connection>https://github.com/youseries/urule.git</connection>
-        <developerConnection>https://github.com/youseries/urule.git</developerConnection>
-        <url>https://github.com/youseries/urule</url>
-    </scm>
-    <organization>
-        <name>Bstek</name>
-        <url>http://www.bstek.com</url>
-    </organization>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>javax.servlet-api</artifactId>
+                <version>3.1.0</version>
+                <scope>provided</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>2.20.0</version>
+        </dependency>
+    </dependencies>
+
     <packaging>pom</packaging>
     <build>
         <resources>
@@ -100,44 +108,48 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>2.4</version>
                 <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                     <encoding>utf-8</encoding>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-source-plugin</artifactId>
-                <version>2.2.1</version>
-                <executions>
-                    <execution>
-                        <id>attach-sources</id>
-                        <goals>
-                            <goal>jar-no-fork</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>2.9.1</version>
-                <executions>
-                    <execution>
-                        <id>attach-javadocs</id>
-                        <goals>
-                            <goal>jar</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-javadoc-plugin</artifactId>-->
+<!--                <version>2.9.1</version>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <id>attach-javadocs</id>-->
+<!--                        <goals>-->
+<!--                            <goal>jar</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
         </plugins>
     </build>
 
-    <name>Urule Parent Project</name>
-    <url>https://github.com/youseries/urule/tree/master/urule-parent</url>
-    <issueManagement>
-        <url>https://github.com/youseries/urule/issues</url>
-    </issueManagement>
-    <description>Urule Parent Project</description>
+    <licenses>
+        <license>
+            <name>The Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <name>Gaojie</name>
+            <email>jacky.gao@bstek.com</email>
+            <organization>Bstek</organization>
+            <organizationUrl>http://www.bstek.com</organizationUrl>
+        </developer>
+    </developers>
+    <scm>
+        <connection>https://github.com/youseries/urule.git</connection>
+        <developerConnection>https://github.com/youseries/urule.git</developerConnection>
+        <url>https://github.com/youseries/urule</url>
+    </scm>
+    <organization>
+        <name>Bstek</name>
+        <url>http://www.bstek.com</url>
+    </organization>
 </project>

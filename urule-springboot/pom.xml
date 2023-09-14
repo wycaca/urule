@@ -3,41 +3,18 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.bstek.urule</groupId>
+
+    <parent>
+        <groupId>com.bstek.urule</groupId>
+        <artifactId>urule-parent</artifactId>
+        <version>2.0.4</version>
+    </parent>
+
+    <name>Urule Springboot Project</name>
+    <description>Urule Springboot Project</description>
     <artifactId>urule-springboot</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <properties>
-        <java.version>1.8</java.version>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
-    <licenses>
-        <license>
-            <name>The Apache License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-        </license>
-    </licenses>
-    <developers>
-        <developer>
-            <name>Gaojie</name>
-            <email>jacky.gao@bstek.com</email>
-            <organization>Bstek</organization>
-            <organizationUrl>http://www.bstek.com</organizationUrl>
-        </developer>
-    </developers>
-    <scm>
-        <connection>https://github.com/youseries/urule.git</connection>
-        <developerConnection>https://github.com/youseries/urule.git</developerConnection>
-        <url>https://github.com/youseries/urule</url>
-    </scm>
-    <organization>
-        <name>Bstek</name>
-        <url>http://www.bstek.com</url>
-    </organization>
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.7.15</version>
-    </parent>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -78,11 +55,4 @@
             </plugin>
         </plugins>
     </build>
-
-    <name>Urule Springboot Project</name>
-    <url>https://github.com/youseries/urule/tree/master/urule-springboot</url>
-    <issueManagement>
-        <url>https://github.com/youseries/urule/issues</url>
-    </issueManagement>
-    <description>Urule Springboot Project</description>
 </project>
