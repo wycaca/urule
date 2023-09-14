@@ -1,12 +1,12 @@
 /*******************************************************************************
  * Copyright 2017 Bstek
- * 
+ *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License.  You may obtain a copy
  * of the License at
- * 
+ *
  *   http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
  * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
@@ -32,62 +32,63 @@ import java.util.List;
  * @since 2014年12月23日
  */
 public class NamedJunctionParser extends CriterionParser {
-	private ValueParser valueParser;
-	public Criterion parse(Element element) {
-		NamedJunction junction=new NamedJunction();
-		junction.setReferenceName(element.attributeValue("reference-name"));
-		junction.setVariableCategory(element.attributeValue("var-category"));
-		junction.setJunctionType(JunctionType.valueOf(element.attributeValue("junction-type")));
-		List<NamedItem> items=new ArrayList<NamedItem>();
-		junction.setItems(items);
-		for(Object obj:element.elements()){
-			if(obj==null || !(obj instanceof Element)){
-				continue;
-			}
-			Element ele=(Element)obj;
-			String name=ele.getName();
-			if(!name.equals("named-criteria")){
-				continue;
-			}
-			items.add(parseNamedItem(ele));
-		}
-		return junction;
-	}
-	
-	private NamedItem parseNamedItem(Element element){
-		NamedItem item=new NamedItem();
-		String variable=element.attributeValue("var");
-		if(StringUtils.isNotEmpty(variable)){
-			item.setVariableName(variable);
-		}
-		String variableLabel=element.attributeValue("var-label");
-		if(StringUtils.isNotEmpty(variableLabel)){
-			item.setVariableLabel(variableLabel);
-		}
-		String datatype=element.attributeValue("datatype");
-		if(StringUtils.isNotEmpty(datatype)){
-			item.setDatatype(Datatype.valueOf(datatype));
-		}
-		Op op=Op.valueOf(element.attributeValue("op"));
-		for(Object obj:element.elements()){
-			if(obj==null || !(obj instanceof Element)){
-				continue;
-			}
-			Element ele=(Element)obj;
-			if(valueParser.support(ele.getName())){
-				item.setValue(valueParser.parse(ele));
-				break;
-			}
-		}
-		item.setOp(op);
-		return item;
-	}
-	
-	public void setValueParser(ValueParser valueParser) {
-		this.valueParser = valueParser;
-	}
+    private ValueParser valueParser;
 
-	public boolean support(String name) {
-		return name.equals("named-atom");
-	}
+    public Criterion parse(Element element) {
+        NamedJunction junction = new NamedJunction();
+        junction.setReferenceName(element.attributeValue("reference-name"));
+        junction.setVariableCategory(element.attributeValue("var-category"));
+        junction.setJunctionType(JunctionType.valueOf(element.attributeValue("junction-type")));
+        List<NamedItem> items = new ArrayList<NamedItem>();
+        junction.setItems(items);
+        for (Object obj : element.elements()) {
+            if (obj == null || !(obj instanceof Element)) {
+                continue;
+            }
+            Element ele = (Element) obj;
+            String name = ele.getName();
+            if (!name.equals("named-criteria")) {
+                continue;
+            }
+            items.add(parseNamedItem(ele));
+        }
+        return junction;
+    }
+
+    private NamedItem parseNamedItem(Element element) {
+        NamedItem item = new NamedItem();
+        String variable = element.attributeValue("var");
+        if (StringUtils.isNotEmpty(variable)) {
+            item.setVariableName(variable);
+        }
+        String variableLabel = element.attributeValue("var-label");
+        if (StringUtils.isNotEmpty(variableLabel)) {
+            item.setVariableLabel(variableLabel);
+        }
+        String datatype = element.attributeValue("datatype");
+        if (StringUtils.isNotEmpty(datatype)) {
+            item.setDatatype(Datatype.valueOf(datatype));
+        }
+        Op op = Op.valueOf(element.attributeValue("op"));
+        for (Object obj : element.elements()) {
+            if (obj == null || !(obj instanceof Element)) {
+                continue;
+            }
+            Element ele = (Element) obj;
+            if (valueParser.support(ele.getName())) {
+                item.setValue(valueParser.parse(ele));
+                break;
+            }
+        }
+        item.setOp(op);
+        return item;
+    }
+
+    public void setValueParser(ValueParser valueParser) {
+        this.valueParser = valueParser;
+    }
+
+    public boolean support(String name) {
+        return name.equals("named-atom");
+    }
 }

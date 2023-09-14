@@ -1,12 +1,12 @@
 /*******************************************************************************
  * Copyright 2017 Bstek
- * 
+ *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License.  You may obtain a copy
  * of the License at
- * 
+ *
  *   http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
  * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
@@ -30,10 +30,10 @@ import java.util.List;
  */
 public class DecisionNodeParser extends FlowNodeParser<DecisionNode> {
 	public DecisionNode parse(Element element) {
-		DecisionNode decision=new DecisionNode(element.attributeValue("name"));
+		DecisionNode decision = new DecisionNode(element.attributeValue("name"));
 		decision.setEventBean(element.attributeValue("event-bean"));
-		String decitionType=element.attributeValue("decision-type");
-		if(StringUtils.isNotEmpty(decitionType)){
+		String decitionType = element.attributeValue("decision-type");
+		if (StringUtils.isNotEmpty(decitionType)) {
 			decision.setDecisionType(DecisionType.valueOf(decitionType));
 		}
 		decision.setX(element.attributeValue("x"));
@@ -41,34 +41,34 @@ public class DecisionNodeParser extends FlowNodeParser<DecisionNode> {
 		decision.setWidth(element.attributeValue("width"));
 		decision.setHeight(element.attributeValue("height"));
 		decision.setConnections(parseConnections(element));
-		List<DecisionItem> items=new ArrayList<DecisionItem>();
-		for(Object obj:element.elements()){
-			if(obj==null || !(obj instanceof Element)){
+		List<DecisionItem> items = new ArrayList<DecisionItem>();
+		for (Object obj : element.elements()) {
+			if (obj == null || !(obj instanceof Element)) {
 				continue;
 			}
-			Element ele=(Element)obj;
-			if(!ele.getName().equals("item")){
+			Element ele = (Element) obj;
+			if (!ele.getName().equals("item")) {
 				continue;
 			}
-			DecisionItem item=parseDecisionItem(ele);
+			DecisionItem item = parseDecisionItem(ele);
 			items.add(item);
 		}
 		decision.setItems(items);
 		return decision;
 	}
-	
-	private DecisionItem parseDecisionItem(Element element){
-		DecisionItem item=new DecisionItem();
+
+	private DecisionItem parseDecisionItem(Element element) {
+		DecisionItem item = new DecisionItem();
 		item.setTo(element.attributeValue("connection"));
-		String script=element.getStringValue();
+		String script = element.getStringValue();
 		item.setScript(script);
-		String percent=element.attributeValue("percent");
-		if(StringUtils.isNotEmpty(percent)){
-			item.setPercent(Integer.valueOf(percent));			
+		String percent = element.attributeValue("percent");
+		if (StringUtils.isNotEmpty(percent)) {
+			item.setPercent(Integer.valueOf(percent));
 		}
 		return item;
 	}
-	
+
 	public boolean support(String name) {
 		return name.equals("decision");
 	}

@@ -1,12 +1,11 @@
 package com.bstek.urule.springboot;
 
-import javax.servlet.http.HttpServlet;
-
+import com.bstek.urule.console.servlet.URuleServlet;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
-import com.bstek.urule.console.servlet.URuleServlet;
+import javax.servlet.http.HttpServlet;
 
 /**
  * @author Jacky.gao
@@ -14,8 +13,8 @@ import com.bstek.urule.console.servlet.URuleServlet;
  */
 @Component
 public class URuleServletRegistration {
-	@Bean
-	public ServletRegistrationBean<HttpServlet> registerURuleServlet(){
-		return new ServletRegistrationBean<HttpServlet>(new URuleServlet(),"/urule/*");
-	}
+    @Bean
+    public ServletRegistrationBean<HttpServlet> registerURuleServlet() {
+        return new ServletRegistrationBean<HttpServlet>(new URuleServlet(), "/urule/*");
+    }
 }

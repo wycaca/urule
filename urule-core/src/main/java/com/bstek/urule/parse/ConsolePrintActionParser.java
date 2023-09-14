@@ -1,12 +1,12 @@
 /*******************************************************************************
  * Copyright 2017 Bstek
- * 
+ *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License.  You may obtain a copy
  * of the License at
- * 
+ *
  *   http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
  * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
@@ -15,10 +15,9 @@
  ******************************************************************************/
 package com.bstek.urule.parse;
 
-import org.dom4j.Element;
-
 import com.bstek.urule.action.Action;
 import com.bstek.urule.action.ConsolePrintAction;
+import org.dom4j.Element;
 
 /**
  * @author Jacky.gao
@@ -26,19 +25,20 @@ import com.bstek.urule.action.ConsolePrintAction;
  */
 public class ConsolePrintActionParser extends ActionParser {
 	public Action parse(Element element) {
-		ConsolePrintAction action=new ConsolePrintAction();
-		for(Object obj:element.elements()){
-			if(obj==null || !(obj instanceof Element)){
+		ConsolePrintAction action = new ConsolePrintAction();
+		for (Object obj : element.elements()) {
+			if (obj == null || !(obj instanceof Element)) {
 				continue;
 			}
-			Element ele=(Element)obj;
-			if(valueParser.support(ele.getName())){
+			Element ele = (Element) obj;
+			if (valueParser.support(ele.getName())) {
 				action.setValue(valueParser.parse(ele));
 				break;
 			}
 		}
 		return action;
 	}
+
 	public boolean support(String name) {
 		return name.equals("console-print");
 	}
