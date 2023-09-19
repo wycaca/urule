@@ -49,9 +49,9 @@ URule提供了两个版本：一个是基于Apache-2.0协议开源免费版本�
 URule PRO版在线示例：[http://112.124.15.63:8084/index.html](http://112.124.15.63:8084/index.html)
 
 # 运行
-npm install core, console
+先安装 core, console
 
-或者直接install parent
+或者直接安装 parent
 
 http://localhost:8080/urule/frame###
 
