@@ -2,6 +2,40 @@
 
 URule是一款纯Java规则引擎，它以RETE算法为基础，提供了向导式规则集、脚本式规则集、决策表、交叉决策表(PRO版提供)、决策树、评分卡及决策流共六种类型的规则定义方式，配合基于WEB的设计器，可快速实现规则的定义、维护与发布。
 
+# console
+server, 服务端, 配合前端Js代码实现管理界面
+
+# console-js
+前端Js代码
+
+# core
+核心代码
+
+### action
+动作库
+
+### builder
+构造器?
+
+### dsl
+特定领域语言, 脚本, tokens支持?
+
+### model
+实体类定义, 包含规则, 决策树, 评分卡等, 只选取部分
+
+### parse
+转化?
+
+# springboot
+兼容处理
+
+老旧代码更新
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
 URule提供了两个版本：一个是基于Apache-2.0协议开源免费版本，URule开源版本第一款基于Apache-2.0协议开源的中式规则引擎；另一个是商用PRO版本，点击http://www.bstek.com 了解更多关于URule商用Pro版更多信息。
 <table><thead>
   <tr>
